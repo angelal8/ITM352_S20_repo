@@ -32,3 +32,7 @@ app.post('/quantity_form', function (request, response) {
 
 app.use(express.static('.public'));
 app.listen(8080, () => console.log(`connected to port 8080`));
+
+
+//LAB
+
