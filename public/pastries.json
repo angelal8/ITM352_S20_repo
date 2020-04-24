@@ -1,0 +1,30 @@
+/* Author of the code: Angela Lee;
+Pictures taken from my workplaces website :)
+Format of the code taken from assignment 1 page */
+[
+    {
+        "cake": "Strawberry Shortcake",
+        "price": 6.00,
+        "image": 'Strawberry_Shortcake.jpg'
+    },
+    {
+        "cake": "Tiramisu",
+        "price": 5.00,
+        "image": 'Tiramisu.jpg'
+    },
+    {
+        "cake": "Cheesecake",
+        "price": 4.50,
+        "image": 'Cheesecake.jpg'
+    },
+    {
+        "cake": "Mont Blanc",
+        "price": 6.00,
+        "image": 'Mont_Blanc.jpg'
+    },
+        {
+        "cake": "Matcha Cake",
+        "price": 5.00,
+        "image": 'Matcha_Cake.jpg'
+    }
+]
