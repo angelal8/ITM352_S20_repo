@@ -46,7 +46,7 @@ function process_quantity_form(POST, response) {
        for (i in products) {
            let q = POST[`quantity${i}`];
            if (isNonNegInt(q) == true) {
-               response.redirect('invoice.html?' + qString); // Redirects with query strings to invoice.html page
+               response.redirect('login.html?' + qString); // Redirects with query strings to invoice.html page
            } else {
                response.redirect('product_display.html?' + qString); // Redirects back to product_display.html page
            }
