@@ -1,0 +1,35 @@
+/* Author of the code: Angela Lee
+This code is used from my own SmartPhoneProducts2/3's products-style.css page */
+
+/* Specifications for images */
+img {
+    /* To create a black border */
+    border: 3px solid black;
+    /* To have a radius around the border */
+    border-radius: 4px;
+    /* Some padding */
+    padding: 3px;
+    /* Sets a small width */
+    width: 300px;
+}
+
+/* General specifications for product_display page */
+
+/* Positions the body of the products */
+main {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+
+}
+
+/* Font is from my own Browser History 2's style.css page */
+body {
+    background-image: url(./images/Background.jpg);
+    font-family: 'Oswald', sans-serif;
+}
+
+/* Typography for the headers to make it centered */
+h1 {
+    text-align: center;
+}
