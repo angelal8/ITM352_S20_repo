@@ -26,38 +26,50 @@ if (fs.existsSync(user_info_file)) { //use existsSync means it waits until this 
 
 app.use(myParser.urlencoded({ extended: true }));
 
-app.get("/login", function (request, response) { //get to login page
-    // Give a simple login form
+app.get("/register", function (request, response) {
+    // Give a simple register form
     str = `
 <body>
-<form action="/check_login?quantity=999" method="POST">
+<form action="/register_user" method="POST">
 <input type="text" name="username" size="40" placeholder="enter username" ><br />
 <input type="password" name="password" size="40" placeholder="enter password"><br />
+<input type="password" name="repeat_password" size="40" placeholder="enter password again"><br />
+<input type="email" name="email" size="40" placeholder="enter email"><br />
 <input type="submit" value="Submit" id="submit">
 </form>
 </body>
     `;
     response.send(str);
-});
+ });
 
-app.post("/check_login", function (request, response) {
-    // Process login form POST and redirect to logged in page if information in login page matches that in the login JSON file, back to login page if not
-    console.log(request.query);
-    var err_str = "";
-    var login_username = request.body["username"];
-    //check if username exists in reg data. if so, check if password matches
-    if (typeof userdata[login_username] != 'undefined') {
-        var user_info = userdata[login_username];
-        if (user_info.password != request.body["password"]) {//check if passowrd stored for username matches what user entered
-            err_str = `bad_password`;
-        } else {
-        response.end(`${login_username} is logged in with data ${JSON.stringify(request.query)}`); //change this to response.redirect for assignment 2
-        return; 
-    } 
-} else {
-        err_str = `bad_username`;
-}
-response.redirect('./login?username}=${login_username}&error=%{err_str}');
-});
+ app.post("/register_user", function (request, response) {
+    // process a simple register form
+    console.log(request.body);
+    username = request.body.username;
+    errs = [];
+    //check if username is taken
+    if(typeof userdata[username] != 'undefined') {
+        errs.push("username taken");
+    } else {
+        userdata[username] = {};
+    }
+    //Check if password is same as the repeat password field
+    if(request["body"]["password"] != request["body"]["repeat_password"]) {
+        errs.push("passwords don't match");
+    } else {
+        userdata[username].password = request["body"]["password"];
+    }
+
+    userdata[username] ={};
+    userdata[username].password = request.body.password;
+    userdata[username].email = request.body.email
+
+    if(errs.length == 0) {
+        fs.writeFileSync(user_info_file, JSON.stringify(userdata));
+        response.end(`New user ${username} registered`);
+    } else {
+        response.end(JSON.stringify(errs));
+    }
+ });
  
 app.listen(8080, () => console.log(`listening on port 8080`));
