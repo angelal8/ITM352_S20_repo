@@ -38,5 +38,5 @@ products =
 // Code is from Professor Dan's Assignment1_2file's product_data.js file
 // Module will export data from products array if module is not undefined
 if(typeof module != 'undefined') {
-    module.exports.products=products;
+    module.exports.products = products;
 }

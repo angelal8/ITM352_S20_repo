@@ -5,7 +5,7 @@
 var express = require('express'); // Requires express in order to run
 var myParser = require("body-parser"); // Loads a body parser module in the server
 var fs = require('fs');
-var data = require("./public/product_data.js"); // Pulls data from my product_data.js
+var data = require('./public/product_data.js'); // Pulls data from my product_data.js
 var products = data.products; // Shows data from product_data.js
 var queryString = require("querystring");
  
