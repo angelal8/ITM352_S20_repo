@@ -1,0 +1,46 @@
+/* Author: Kiara Furutani and Angela Lee
+ This file contains style elements for the Shopping and Invoice pages */
+
+ img {
+    /* Sets styles for all images */ 
+    border: 7px solid teal;
+   /* Teal Border */
+    border-radius: 4px;
+    /* Rounded border */
+    width: 350px;
+    /* Set a small width */
+    padding: 2px;
+}
+Main {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    /* Positions Products */
+
+}
+/* Taken from W3Schools 
+Centers content and sets background image */ 
+body {
+ background-image: url(./images/BackdropDisplay.jpg);
+}
+
+h1 {
+    text-align: center;
+}
+
+h3 {
+    text-align: center;
+}
+
+div.headhome {
+    size: 10px;
+}
+
+/* Taken from stackoverflow.com
+Changes color before and after click */
+a:active {
+    color: rgb(54, 52, 52);
+}
+a:visited {
+    color:rgb(161, 68, 104);
+}
