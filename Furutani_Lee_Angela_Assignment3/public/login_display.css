@@ -1,86 +1,86 @@
 /*
-Author: Kiara Furutani and Angela Lee
+Author: Kiara Furutani
 This file holds styling elements for the login page
 styles taken from https://codepen.io/colorlib/pen/rxddKy and modified */
 
 .login-page {
-    width: 360px;
-    padding: 8% 0 0;
-    margin: auto;
-    /* Set's padding on border of box */
-  }
-  
-  .form {
-    position: relative;
-    z-index: 1;
-    background: #FFFFFF;
-    max-width: 360px;
-    margin: 0 auto 100px;
-    padding: 45px;
-    text-align: center;
-    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
-    /* Styles appearance of div holding form to fill out */
-  }
-  
-  .form input {
-    font-family: "Roboto", sans-serif;
-    outline: 0;
-    background: #f2f2f2;
-    width: 100%;
-    border: 0;
-    margin: 0 0 15px;
-    padding: 15px;
-    box-sizing: border-box;
-    font-size: 14px;
-    align-items: center;
-    /* Styles elements for boxes for users to type info into
-    Styles box labels and fillers */
-  }
-  
-  .form button {
-    font-family: "Roboto", sans-serif;
-    text-transform: uppercase;
-    outline: 0;
-    background: rgb(10, 141, 130);
-    width: 100%;
-    border: 0;
-    padding: 15px;
-    color: #FFFFFF;
-    font-size: 14px;
-    -webkit-transition: all 0.3 ease;
-    transition: all 0.3 ease;
-    cursor: pointer;
-    /* Styles button to login or create account */
-  }
-  
-  .form button:hover, .form button:active, .form button:focus {
-    background: rgb(5, 63, 55);
-    /* Sets change in color to button once cursor is hovered over */
-  }
-  
-  .form .message {
-    margin: 15px 0 0;
-    color: gray;
-    font-size: 15px;
-    /* Sets font and color for message displayed beneath form */
-  }
-  
-  .form .message a {
-    color: seagreen;
-    text-decoration: none;
-    /* Sets color for hyperlink from login page to registration page */
-  }
-  
-  body {
-    background-image: url(./images/loginbackdrop.jpg);
-    background-size: 750px;
-    /* Sets background image and size */
-  }
-  
-  h1 {
-    text-align: center;
-    background-color: rgba(181, 212, 211, 0.795);
-    /* Sets transparent background behind text */
-    color: rgb(5, 63, 55);
-    /* Sets color of text */
-  }
+  width: 360px;
+  padding: 8% 0 0;
+  margin: auto;
+  /* Set's padding on border of box */
+}
+
+.form {
+  position: relative;
+  z-index: 1;
+  background: #FFFFFF;
+  max-width: 360px;
+  margin: 0 auto 100px;
+  padding: 45px;
+  text-align: center;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  /* Styles appearance of div holding form to fill out */
+}
+
+.form input {
+  font-family: "Roboto", sans-serif;
+  outline: 0;
+  background: #f2f2f2;
+  width: 100%;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+  align-items: center;
+  /* Styles elements for boxes for users to type info into
+  Styles box labels and fillers */
+}
+
+.form button {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  background: rgb(10, 141, 130);
+  width: 100%;
+  border: 0;
+  padding: 15px;
+  color: #FFFFFF;
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+  /* Styles button to login or create account */
+}
+
+.form button:hover, .form button:active, .form button:focus {
+  background: rgb(5, 63, 55);
+  /* Sets change in color to button once cursor is hovered over */
+}
+
+.form .message {
+  margin: 15px 0 0;
+  color: gray;
+  font-size: 15px;
+  /* Sets font and color for message displayed beneath form */
+}
+
+.form .message a {
+  color: seagreen;
+  text-decoration: none;
+  /* Sets color for hyperlink from login page to registration page */
+}
+
+body {
+  background-image: url(./images/loginbackdrop.jpg);
+  background-size: 750px;
+  /* Sets background image and size */
+}
+
+h1 {
+  text-align: center;
+  background-color: rgba(181, 212, 211, 0.795);
+  /* Sets transparent background behind text */
+  color: rgb(5, 63, 55);
+  /* Sets color of text */
+}

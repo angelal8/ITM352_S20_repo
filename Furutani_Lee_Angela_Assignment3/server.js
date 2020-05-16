@@ -21,8 +21,8 @@ var message = {
     to: 'Nodemailer <${username.email}>',
     subject: 'Succulent Receipt',
     text: 'Thank you for shopping with us!',
-    html: '<p>For clients that do not support AMP4EMAIL or amp
-    headers: {
+    html: '<p>For clients that do not support AMP4EMAIL or amp'
+    ,headers: {
         'My-Custom-Header': 'header value'
     },
     date: new Date('2000-01-01 00:00:00')
@@ -36,28 +36,9 @@ app.post("/process_form", function (request, response) {
 app.use(express.static('./public'));
 app.listen(8080, () => console.log(`listening on port 8080`));
 
-// Took code from https://nodemailer.com/smtp/
-let transporter = nodemailer.createTransport(options[, defaults])
-let poolConfig = "smtps://username:password@smtp.example.com/?pool=true";
-nodemailer.createTransport({
-    host: "mail.hawaii.com",
-    port: 8080,
-    secure: false, // upgrade later with STARTTLS
-    auth: {
-      user: "username",
-      pass: "password"
-    }
-  });
-  // verify connection configuration
-transporter.verify(function(error, success) {
-    if (error) {
-      console.log(error);
-    } else {
-      console.log("Server is ready to take our messages");
-    }
-  });
 
-}
+
+
 
 function isNonNegInt(q, returnErrors = false) {
     errors = []; // assume no errors at first
@@ -128,7 +109,26 @@ function quantity_form(POST, response) {
                             return;
                         }
                 }
-                
+                app.post("/check_login", function (request, response) {
+                    // Process login form POST and redirect to logged in page if ok, back to login page if not
+                    console.log(request.query);
+                    var err_str = "";
+                    var login_username = request.body["username"];
+                    // check if username exists in reg data. If so, check if password matches
+                    if (typeof userdata[login_username] != 'undefined') {
+                        var user_info = userdata[login_username];
+                        // check if password stored for username matches what user typed in
+                        if (user_info["password"] != request.body["password"]) {
+                            err_str = `bad_password`;
+                        } else {
+                            session.username = login_usernme;
+                            var theDate = Date().now();
+                            session.last_login_time = theDate;
+                            response.cookie('username', login_username, {maxAge: 5*1000});
+                            response.end(`${login_username} is logged in with data ${JSON.stringify(quantity_str)} on ${theDate}`);
+                            return;
+                        }
+                }
                     request.query.err=err_str // detects if error
                     response.redirect('./login_display.html?'+ qs.stringify(request.query));
             });
@@ -145,6 +145,4 @@ function quantity_form(POST, response) {
             });
 
 
-        }
-    }
-    }};
+                })}})}}}}

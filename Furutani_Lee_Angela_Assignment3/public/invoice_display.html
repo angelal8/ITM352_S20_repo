@@ -4,10 +4,8 @@
   Template taken from my Invoice 1_1 with assistance from Kobe Dait -->
 
   <script src="./product_data.js" type="text/javascript"></script>
-<!-- get user's name to personalize checkout -->
-<script src="../user_data.json" type="json"></script>
-
-
+  <script src="../user_data.json" type="json"></script>
+  
   <script>
     var subtotal = 0;
   
@@ -40,22 +38,23 @@
   </header>
   
   <body>
-    <script> // Thank the user for purchasing the product
-
+    <script> 
+    // Personalization: Thanks the user using their name inputted in the data
+  
       if (name != 'undefined' && name != '') {
-
+  
           document.write(`
-              <h3 align="center">Thank you for your purchase, ${name}! Shop with us again!<br />A copy of your receipt will be sent to ${username.email}</h3><br />
+              <h3 align="center">Thank you, ${name}! Hope you come back for more! <br />A copy of your reciept will be sent to ${username.email}</h3><br />
           `)
-
+  
       } else {
-
+  
           document.write(`
-              <h3 align="center">Thank you for your purchase, ${username}! Shop with us again!<br />A copy of your receipt will be sent to your ${username.email}</h3><br />
+              <h3 align="center">Thank you, ${username}! Hope you come back for more!<br />A copy of your reciept will be sent to ${username.email}</h3><br />
           `)
-
+  
       }
-
+  
   </script>
     <!-- Creates table labels -->
     <div style="width: 600px; margin: auto;">

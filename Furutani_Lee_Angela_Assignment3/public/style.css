@@ -1,30 +1,37 @@
-/* Author: Kiara Furutani and Angela Lee
+/* Author: Kiara Furutani 
  This file contains style elements for the Shopping and Invoice pages */
 
+
  img {
-    /* Sets styles for all images */ 
+    /* Sets styles for all images */
     border: 7px solid teal;
-   /* Teal Border */
+    /* Teal Border */
     border-radius: 4px;
     /* Rounded border */
     width: 350px;
     /* Set a small width */
     padding: 2px;
 }
+
 Main {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
     /* Positions Products */
-
 }
+
 /* Taken from W3Schools 
-Centers content and sets background image */ 
+Centers content and sets background image */
+
 body {
- background-image: url(./images/BackdropDisplay.jpg);
+    background-image: url(./images/BackdropDisplay.jpg);
 }
 
 h1 {
+    text-align: center;
+}
+
+h2 {
     text-align: center;
 }
 
@@ -32,15 +39,115 @@ h3 {
     text-align: center;
 }
 
-div.headhome {
-    size: 10px;
+p {
+    text-align: center;
+   
 }
+
 
 /* Taken from stackoverflow.com
 Changes color before and after click */
+
 a:active {
     color: rgb(54, 52, 52);
 }
+
 a:visited {
-    color:rgb(161, 68, 104);
+    color: rgb(161, 68, 104);
+}
+
+/* Button styles from https://codingislove.com/fixed-button-in-html/ and modified */ 
+
+/* Styles color and padding of next page button */
+.nextbutton {
+    background-color: rgb(6, 58, 71);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 4px;
+    border-color: #060b0c;
+}
+/* Styles fixed positioning for next page button */
+#nextbutton {
+    position: fixed;
+    bottom: -4px;
+    right: 140px;
+}
+
+/* Styles color and padding of view cart button */
+.buybutton {
+    background-color: rgb(6, 58, 71);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 4px;
+    border-color: #060b0c;
+}
+
+/* Styles color and padding of view cart button */
+#buybutton {
+    position: fixed;
+    bottom: -4px;
+    right: 43px; 
+}
+
+/* Styles color and padding of back button */
+.backbutton {
+    background-color: rgb(6, 58, 71);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 4px;
+    border-color: #060b0c;
+}
+
+/* Styles color and padding of back button */
+#backbutton {
+    position: fixed;
+    bottom: -4px;
+    right: 240px; 
+}
+
+/* Styles color and padding of login button */
+.loginbutton {
+    background-color: rgb(6, 58, 71);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 4px;
+    border-color: #060b0c;
+}
+
+/* Styles color and padding of login button */
+#loginbutton {
+    position: fixed;
+    bottom: -4px;
+    right: 1310px; 
+}
+
+/* Styles color and padding of register button */
+.registerbutton {
+    background-color: rgb(6, 58, 71);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 4px;
+    border-color: #060b0c;
+}
+
+/* Styles color and padding of register button */
+#registerbutton {
+    position: fixed;
+    bottom: -4px;
+    right: 1222px; 
+}
+/* Styles color and padding of cart button */
+.cartbutton {
+    background-color: rgb(6, 58, 71);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 4px;
+    border-color: #060b0c;
+}
+
+/* Styles color and padding of cart button */
+#cartbutton {
+    position: fixed;
+    bottom: -4px;
+    right: 313px; 
 }
